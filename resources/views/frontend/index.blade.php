@@ -7,10 +7,10 @@
         <div class="col">
             <div class="card">
                 <div class="card-header">
-                    <i class="fas fa-home"></i> {{ __('navs.general.home') }}
+                    <i class="fas fa-home"></i> Mes Listes
                 </div>
                 <div class="card-body">
-                    {{ __('strings.frontend.welcome_to', ['place' => app_name()]) }}
+                    Mes Listes
                 </div>
             </div><!--card-->
         </div><!--col-->
@@ -26,7 +26,7 @@
         <div class="col">
             <div class="card">
                 <div class="card-header">
-                    <i class="fab fa-font-awesome-flag"></i> Font Awesome {{ __('strings.frontend.test') }}
+                    <i class="fab fa-font-awesome-flag"></i> Font Pas du tout Awesome {{ __('strings.frontend.test') }}
                 </div>
                 <div class="card-body">
                     <i class="fas fa-home"></i>
