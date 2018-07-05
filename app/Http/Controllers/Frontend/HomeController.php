@@ -23,4 +23,9 @@ class HomeController extends Controller
 
         return view('frontend.index', ['lists' => $lists]);
     }
+
+    public function map()
+    {
+        return view('frontend.map');
+    }
 }
