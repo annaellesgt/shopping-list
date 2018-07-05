@@ -12,7 +12,7 @@
                 <div class="card-body">
                     <ul>
                         @foreach ($lists as $list)
-                            <li><a href="{{route('frontend.detailList', {{$list->id}})}}"> {{$list->name}} </a></li>
+                            <li><a href="{{route('frontend.detailList', $list->id)}}"> {{$list->name}} </a></li>
                         @endforeach
                     </ul>
                     <div>
