@@ -5,6 +5,7 @@
  * All route names are prefixed with 'frontend.'.
  */
 Route::get('/createList', 'ListController@createList')->name('createList');
+Route::post('createList/send', 'ListController@send')->name('createList.send');
 Route::get('/detailList', 'ListController@detailList')->name('detailList');
 Route::get('/addItem', 'ListController@addItem')->name('addItem');
 
