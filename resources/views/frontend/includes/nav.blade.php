@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
-    <a href="{{ route('frontend.index') }}" class="navbar-brand">Chow Chow Ping List</a>
+    <a href="{{ route('frontend.index') }}" class="navbar-brand">Dem Shopping Lists Tho</a>
 
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('labels.general.toggle_navigation') }}">
         <span class="navbar-toggler-icon"></span>
@@ -18,8 +18,13 @@
 
             @auth
                 <li class="nav-item"><a href="{{route('frontend.user.dashboard')}}" class="nav-link {{ active_class(Active::checkRoute('frontend.user.dashboard')) }}">{{ __('navs.frontend.dashboard') }}</a></li>
-            @endauth
+            @endauth -->
 
+            <li class="nav-item"><a href="" class="nav-link"> Home </a></li>
+            <li class="nav-item"><a href="" class="nav-link"> My lists </a></li>
+            <li class="nav-item"><a href="" class="nav-link"> Friends </a></li>
+            <li class="nav-item"><a href="" class="nav-link"> Map </a></li>
+            <li class="nav-item"><a href="" class="nav-link"> Help </a></li>
             @guest
                 <li class="nav-item"><a href="{{route('frontend.auth.login')}}" class="nav-link {{ active_class(Active::checkRoute('frontend.auth.login')) }}">{{ __('navs.frontend.login') }}</a></li>
 
