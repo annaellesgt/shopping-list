@@ -19,8 +19,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $lists = DB::select('select * from listitem where user_id = ?', [Auth::user()->id]);
+        if(Auth::user() != null){
 
+        $id = Auth::user()->id;
+
+        }else{
+            $id = 4;
+        }
+
+        $lists = DB::select('select * from listitem where user_id = ?', [$id]);
         return view('frontend.index', ['lists' => $lists]);
     }
 

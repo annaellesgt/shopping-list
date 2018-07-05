@@ -23,8 +23,11 @@ class ListController extends Controller
 
     public function detailList($id)
     {
+
         $listDetail = DB::select('select name, user_id  from listitem where id = ?', [$id]);
-        return view('frontend.list.detailList', ['listDetail' => $listDetail]);
+
+        
+        return view('frontend.list.detailList', ['listDetail' => $listDetail[0]]);
     }
 
     public function addItem()
