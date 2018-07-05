@@ -11,12 +11,12 @@
                 </div>
                 <div class="card-body">
                     <ul>
-                        <li> Grocery List </li>
-                        <li> Summer sales! </li>
-                        <li> TO BUY: Friday's Party </li>
+                        @foreach ($lists as $list)
+                            <li><a href="{{route('frontend.detailList', {{$list->id}})}}"> {{$list->name}} </a></li>
+                        @endforeach
                     </ul>
                     <div>
-                        <i class="fas fa-plus-circle"></i> Create new list
+                        <a href="{{route('frontend.createList')}}"><i class="fas fa-plus-circle"></i> Create new list</a>
                     </div>
                 </div>
             </div><!--card-->
