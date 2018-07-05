@@ -19,7 +19,10 @@
         <!-- Check if the language is set to RTL, so apply the RTL layouts -->
         <!-- Otherwise apply the normal LTR layouts -->
         {{ style(mix('css/frontend.css')) }}
-
+        <script src="{{ asset('/js/app.js') }}"></script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0a_jA3N22vODob7eHjCQjUnCd4vtU9bg&callback=initMap">
+        </script>
         @stack('after-styles')
     </head>
     <body>
