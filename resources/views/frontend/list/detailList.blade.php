@@ -47,9 +47,6 @@
                                     </div>
 
                             </div><!--tab panel profile-->
-
-
-
                         </div><!--tab content-->
                     </div><!--tab panel-->
                 </div><!--card body-->
