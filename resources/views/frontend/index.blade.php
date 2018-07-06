@@ -7,33 +7,18 @@
         <div class="col">
             <div class="card">
                 <div class="card-header">
-                    <i class="fas fa-home"></i> Mes Listes
+                    <i class="fas fa-list"></i> My Lists
                 </div>
                 <div class="card-body">
-                    Mes Listes
+                    <ul>
+                        @foreach ($lists as $list)
+                            <li><a href="{{route('frontend.detailList', $list->id)}}"> {{$list->name}} </a></li>
+                        @endforeach
+                    </ul>
+                    <div>
+                        <a href="{{route('frontend.createList')}}"><i class="fas fa-plus-circle"></i> Create new list</a>
+                    </div>
                 </div>
-            </div><!--card-->
-        </div><!--col-->
-    </div><!--row-->
-
-    <div class="row mb-4">
-        <div class="col">
-            <example-component></example-component>
-        </div><!--col-->
-    </div><!--row-->
-
-    <div class="row">
-        <div class="col">
-            <div class="card">
-                <div class="card-header">
-                    <i class="fab fa-font-awesome-flag"></i> Font Pas du tout Awesome {{ __('strings.frontend.test') }}
-                </div>
-                <div class="card-body">
-                    <i class="fas fa-home"></i>
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-pinterest"></i>
-                </div><!--card-body-->
             </div><!--card-->
         </div><!--col-->
     </div><!--row-->
