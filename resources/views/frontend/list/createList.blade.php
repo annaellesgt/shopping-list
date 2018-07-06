@@ -20,18 +20,27 @@
 
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade show active pt-3" id="profile" aria-labelledby="profile-tab">
-                                <form>
+                                {{ html()->form('POST', route('frontend.createList.send'))->open() }}
                                     <div class="form-group">
-                                        <label for="inputName">Name</label>
-                                        <input type="name" class="form-control" id="inputName" aria-describedby="nameHelp" placeholder="Enter name">
+                                        {{ html()->label('Name')->for('inputName') }}
+
+                                        {{ html()->text('inputName')
+                                            ->class('form-control')
+                                            ->placeholder('Enter name')
+                                            ->required() }}
                                         <small id="nameHelp" class="form-text text-muted">This name will be use to share your list.</small>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputDescription">Description</label>
-                                        <textarea  type="text" class="form-control" id="inputDescription" placeholder="Description"> </textarea>
+                                        {{ html()->label('Description')->for('inputDescription') }}
+
+                                        {{ html()->text('inputDescription')
+                                            ->class('form-control')
+                                            ->placeholder('Description')
+                                            ->required() }}
                                     </div>
-                                    <button type="submit" class="btn btn-primary float-right">Create</button>
-                                </form>
+                                {{ form_submit('Create'), array('class' => 'btn btn-primary float-right') }}
+
+                                {{ html()->form()->close() }}
                             </div><!--tab panel profile-->
 
 

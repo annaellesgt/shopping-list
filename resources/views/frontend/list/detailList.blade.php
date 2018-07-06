@@ -14,7 +14,7 @@
                     <div role="tabpanel">
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item">
-                                <a href="#profile" class="nav-link active" aria-controls="profile" role="tab" data-toggle="tab"><b>MyList</b></a>
+                                <a href="#profile" class="nav-link active" aria-controls="profile" role="tab" data-toggle="tab"><b>{{ $listDetail->name }} </b></a>
                             </li>
                         </ul>
 
@@ -47,9 +47,6 @@
                                     </div>
 
                             </div><!--tab panel profile-->
-
-
-
                         </div><!--tab content-->
                     </div><!--tab panel-->
                 </div><!--card body-->
