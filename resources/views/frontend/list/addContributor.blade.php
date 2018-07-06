@@ -14,37 +14,23 @@
                     <div role="tabpanel">
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item">
-                                <a href="#profile" class="nav-link active" aria-controls="profile" role="tab" data-toggle="tab">Add new item</a>
+                                <a href="#profile" class="nav-link active" aria-controls="profile" role="tab" data-toggle="tab">Add new Contributor</a>
                             </li>
                         </ul>
 
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade show active pt-3" id="profile" aria-labelledby="profile-tab">
-                                {{ html()->form('POST', route('frontend.additem.send'))->open() }}
+                                {{ html()->form('POST', route('frontend.addContributor.send'))->open() }}
                                 <div class="form-group">
-                                    {{ html()->label('Name')->for('inputName') }}
-
-                                    {{ html()->text('inputName')
-                                        ->class('form-control')
-                                        ->placeholder('Enter name')
-                                        ->required() }}
+                                    <label for="sel1">Email:</label>
+                                    <select class="form-control" id="email" name="email">
+                                        @foreach ($users as $user)
+                                            <option value="{{$user->email}}">{{$user->email}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
-                                <div class="form-group">
-                                    {{ html()->label('Price')->for('inputPrice') }}
 
-                                    {{ html()->text('inputPrice')
-                                        ->class('form-control')
-                                        ->placeholder('Price')
-                                        ->required() }}
-                                </div>
-                                <div class="form-group">
-                                    {{ html()->label('Qte')->for('inputQte') }}
 
-                                    {{ html()->text('inputQte')
-                                        ->class('form-control')
-                                        ->placeholder('Qte')
-                                        ->required() }}
-                                </div>
                                 <input id="hiddenId" name="hiddenId" type="hidden" value="{{ $id }}">
                                 {{ form_submit('Create'), array('class' => 'btn btn-primary float-right') }}
 
