@@ -22,7 +22,7 @@
 
             <li class="nav-item"><a href="" class="nav-link"> Home </a></li>
             <li class="nav-item"><a href="" class="nav-link"> My lists </a></li>
-            <li class="nav-item"><a href="" class="nav-link"> Friends </a></li>
+            <li class="nav-item"><a href="{{route('frontend.friendslist')}}" class="nav-link"> Friends </a></li>
             <li class="nav-item"><a href="{{route('frontend.map')}}" class="nav-link"> Map </a></li>
             <li class="nav-item"><a href="" class="nav-link"> Help </a></li>
             @guest
