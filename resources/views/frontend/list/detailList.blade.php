@@ -63,8 +63,6 @@
                                     @endif
                                 @endforeach
                             </div>
-
-
                         </div><!--tab content-->
                     </div><!--tab panel-->
                 </div><!--card body-->
